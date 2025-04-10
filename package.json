@@ -1,0 +1,44 @@
+{
+  "name": "functions",
+  "type": "module",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "clear": "rm -rf ./lib",
+    "build": "tsc",
+    "serve": "npm run clear && npm run build",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "node lib/index.js",
+    "clean-cache": "npm cache clean --force"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@apollo/server": "^4.9.5",
+    "@graphql-tools/schema": "^9.0.13",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^11.11.1",
+    "graphql-resolvers": "^0.4.2",
+    "graphql-subscriptions": "^2.0.0",
+    "graphql-tag": "^2.12.6",
+    "graphql-type-json": "^0.3.2",
+    "graphql-upload": "^17.0.0",
+    "graphql-upload-ts": "^2.1.2",
+    "graphql-ws": "^5.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^2.0.5",
+    "node-nlp": "^4.27.0",
+    "tokenizers": "^0.13.3",
+    "ts-node": "^10.5.0",
+    "tslint": "^5.20.1",
+    "typescript": "^4.5.5",
+    "ws": "^8.14.2",
+    "xregexp": "^5.1.1"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/graphql-upload": "^17.0.0"
+  }
+}
